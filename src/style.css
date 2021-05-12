@@ -1,0 +1,175 @@
+/* Обнуляющие свойства */
+*{padding:0;margin:0;border:0;box-sizing:border-box}
+aside,footer,header,nav{display:block}
+body,html{height:100%;width:100%;font-size:100%;font-size:14px;background-color:#acacac;font-family:sans-serif}
+button,input,textarea{font-family:inherit}
+.container{max-width:1080px}
+a,a:hover,a:visited{text-decoration:none}
+ul li{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+:active,:focus{outline:none}
+/* Обнуляющие свойства */
+
+/* Свойство контейнера + кнопки + input`а*/
+.container{
+	margin:20px auto 0;
+	max-width:575px;
+	width:100%;
+
+	border-radius:5px;
+	box-shadow:0 0 5px #000;
+	background-color:#fff;
+
+	padding-top:10px
+}
+.container__addTask{
+	display:flex;
+
+	position:relative;
+
+	margin:0 10px;
+	padding-bottom: 10px;
+}
+.container__title{
+	position:absolute;
+	z-index:1000;
+	left:20px;
+	top:-5px;
+	
+	background-color:#fff;
+	padding:0 5px;
+	font-size:12px;
+	color:#a2a6ad;
+}
+.container__item{
+	flex:3 1;
+	border:1.5px solid #d6d6d6;
+	border-radius:5px;
+	padding:15px 10px;
+	width:80%;
+
+	color: #90949b;
+
+	transition: box-shadow .3s, border-color .3s;
+}
+.container__input::placeholder{
+	color: #90949b;
+}
+.container__input:focus{
+	box-shadow:0 0 5px #000;
+	border-color:#000;
+}
+.container__input:hover{
+	border-color:#7c7b7b;
+}
+.container__button{
+	flex:1 1;
+	margin-left:20px;
+	color:#80bf83;
+	border:1.5px solid #80bf83;
+	background-color:#fff;
+
+	transition: background-color .15s;
+}
+.container__button:hover{
+	cursor:pointer;
+	box-shadow: 0 0 15px #c7ffc4;
+	background-color: rgba(199, 255, 196, 0.671);
+}
+.container__button:active{
+	background-color:#93fc8e;
+	
+}
+/* Свойство контейнера + кнопки + input`а*/
+
+/* Свойства списка и его элементов */
+.item{
+	display: flex;
+
+	height: 50px;
+}
+
+.item__elem {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+.check{
+	flex: 0 0 50px;
+	
+}
+.text{
+	flex: 1 1 0;
+}
+.delete{
+	flex: 0 0 50px;
+}
+.check__label{
+	width: 17px;
+	height: 17px;
+	
+	border-radius: 3px;
+
+	background: #fff url('img/check.png') center center / cover no-repeat scroll;	
+
+	transition: box-shadow .3s, cursor .3s;
+}
+.check__label:hover {
+	box-shadow: 0 0 15px #f04d86;
+	cursor: pointer;
+}
+.check__label--true{
+	width: 17px;
+	height: 17px;
+	
+	border-radius: 3px;
+
+	background: #fff;	
+	border: 1px solid #000;
+
+}
+.check__input, .delete__input{ 
+	visibility: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.delete__label {
+	width: 15px;
+	height: 15px;
+
+	border-radius: 3px;
+
+	background: #fff url('img/delete.png') center center / cover no-repeat scroll;
+
+	transition: cursor .3s, transform .3s;
+}
+.delete__label:hover{
+	cursor: pointer;
+	transform: scale(1.4);
+
+}
+
+.text__input{
+	width: 100%;
+
+	margin: 0 20px;
+	padding: 0 5px 3px 5px;
+
+	border-bottom: 2px solid #d6d6d6;
+	color: #90949b;
+
+	transition: color .3s, border-bottom .3s, transform .3s;
+}
+.text__input:hover{
+	border-bottom: 2px solid #8f8d8d;
+	transform: scale(1.02);
+}
+.text__input:focus{
+	color: #000;
+
+	border-bottom: 2px solid #000;
+	transform: scale(1.05);
+}
+
+/* Свойства списка и его элементов */
